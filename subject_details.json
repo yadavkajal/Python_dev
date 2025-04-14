@@ -1,0 +1,27 @@
+{
+    "Hindi" : {
+        "semester" : "I",
+        "marks" : 55,
+        "isPass" : true
+    },
+    "English" : {
+        "semester" : "I",
+        "marks" : 67,
+        "isPass" : true
+    },
+    "Mathematics" : {
+        "semester" : "I",
+        "marks" : 78,
+        "isPass" : true
+    },
+    "Science" : {
+        "semester" : "I",
+        "marks" : 98,
+        "isPass" : true
+    },
+    "Marathi" : {
+        "semester" : "I",
+        "marks" : 23,
+        "isPass" : false
+    }
+}
