@@ -1,0 +1,2 @@
+I want to replace all text with this oneI want to append the second line without overwriting the file
+I want to append the third line in next line without overwriting the file
