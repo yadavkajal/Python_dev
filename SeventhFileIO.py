@@ -35,3 +35,94 @@ f = open ("demo.txt", "a")
 f.write("\nI want to append the third line in next line without overwriting the file")
 f.close()
 
+#ToCreate an empty file in python we just need below code
+f=open("createdbywritemode.txt","w")
+f.close()
+
+#or
+
+f=open("createdbywritemode.txt","a")
+f.close()
+
+#r+ mode where a file with data will be override by text from beginning which we provide
+f=open("createdbywritemode.txt","r+")
+f.write("abcd")
+print(f.read())
+f.close()
+
+# w+
+f=open("createdbywritemode.txt","w+")
+f.write("abcd")
+print(f.read())
+f.close()
+
+#r+
+f=open("createdbywritemode.txt","a+")
+f.write("abcd")
+print(f.read())
+f.close()
+
+
+#with syntax
+
+with open("demo.txt","r") as f:
+    print(f.read())
+
+with open("demo.txt","w") as f:
+    f.write("This is new data")
+
+
+#to delete file we need to import os
+import os
+os.remove("demo.txt")
+
+#Practice Questions
+
+#create a file "practice.txt" using python add the following data in it
+#Hi everyone 
+#we are learnig file IO.
+# using java
+# I like programming in java.
+
+with open("practice.txt","w+") as f:
+    f.write("Hi everyone \n We are learning file IO\n using java\n I like programming in java")
+
+#------------------------------------------------------------------------------------
+#Write a function that replace all occurences of "java" with python in above file.
+
+with open("practice.txt","r") as f:
+    read=f.read()
+new_data=read.replace("java","python")
+print(new_data)
+with open("practice.txt","w") as f:
+    f.write(new_data)
+
+#or (in function)
+def replace():
+    with open("practice.txt","r") as f:
+        read=f.read()
+    new_data=read.replace("java","python")
+    print(new_data)
+    with open("practice.txt","w") as f:
+        f.write(new_data)
+replace()
+#Search if the word "learning" exist in the file or not
+
+with open("practice.txt","r") as f:
+    data=f.read()
+count=data.count("learning")
+if(count>=1):
+    print("Learning exist in this file")
+else:
+    print("learning does not exist")
+
+#or
+
+with open("practice.txt","r") as f:
+    data=f.read()
+    if(data.find("learning")!=-1):
+        print("found")
+    else:
+        print("not found")
+
+#WAF to find in which line of the file does the word "learning" occurs first. print -1 if word not found
