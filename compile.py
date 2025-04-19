@@ -1,9 +1,10 @@
-def occur():
-    with open("practice.txt","r") as f:
-        for i in f:
-            data=f.readline()
-            if(data.find("learning")!=-1):
-                print("found")
-            else:
-                print("-1 not found")
-occur()
+count=0
+with open("numbers.txt","r") as f:
+    data=f.read()
+    val= data.split(",")
+    for i in val:
+        if(int(i)%2==0):
+            count+=1
+print(count)
+    
+    
